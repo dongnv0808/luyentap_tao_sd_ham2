@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputValue" type="text">
+    <button onclick="checkValue()">Check</button>
+</body>
+<script>
+    let strings = "codegym.vn"
+    let arrStrings = strings.split('');
+    function checkValue(){
+        let inputValue = document.getElementById("inputValue").value;
+        let arrInput = inputValue.split('');
+        let count = 0;
+        let checkInput = false;
+        for(let i = 0; i < arrStrings.length; i++){
+            for(let j = 0; j < arrInput.length; j++){
+                if(arrStrings[i] == arrInput[j]){
+                    checkInput = true;
+                    count++;
+                }
+            }
+        }
+        if(checkInput == true){
+            alert(`Có ${count} phần tử trong chuỗi ${strings}`);
+        }else{
+            alert('-1')
+        }
+    }
+</script>
+</html>

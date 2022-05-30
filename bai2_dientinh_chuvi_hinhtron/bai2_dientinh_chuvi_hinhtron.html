@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dienTich(banKinh,duongKinh){
+            dienTichBanKinh = banKinh*banKinh/3.14
+            dienTichDuongKinh = duongKinh*duongKinh/4*3.14;
+            return document.write(`Duong kinh: ${duongKinh} | Dien tich = ${dienTichDuongKinh}<br>`), document.write(`Ban kinh: ${banKinh} | Dien tich = ${dienTichBanKinh}<br>`);
+        }
+
+        function chuVi(banKinh,duongKinh){
+            chuViBanKinh = banKinh*banKinh*3.14;
+            chuViDuongKinh = duongKinh*3.14;
+            return document.write(`Duong kinh: ${duongKinh} | Chu vi = ${chuViDuongKinh}<br>`), document.write(`Ban kinh: ${banKinh} | Chu vi = ${chuViBanKinh}<br>`);
+        }
+
+        let banKinh = +prompt("Nhap ban kinh:");
+        let duongKinh = +prompt("Nhap duong kinh:");
+        dienTich(banKinh,duongKinh);
+        chuVi(banKinh,duongKinh);
+    </script>
+</body>
+</html>
